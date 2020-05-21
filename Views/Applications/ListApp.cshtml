@@ -1,0 +1,16 @@
+﻿    <h1>
+        Все приложения
+    </h1>
+    <h3>
+        @Model.ApplicationCategory
+    </h3>
+    <div class=" row mt-5 mb-2">
+        @{
+            foreach (Application application in Model.allApplications)
+            {
+                @Html.Partial("AllApplications", application)
+
+
+            }
+         }
+    </div>

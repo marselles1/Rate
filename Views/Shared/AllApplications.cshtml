@@ -1,0 +1,9 @@
+﻿@model Application
+
+<div class=" col-lg-4">
+    <img class=" img-thumbnail" src="@Model.img" alt="@Model.name" />
+    <h2>@Model.name</h2>
+    <p>@Model.shortDesc</p>
+    <p>Рейтинг @Model.rate</p>
+    <p><a class="btn btn-warning" asp-controller="RateCard" asp-action="addToCard" asp-route-Id="@Model.id">Подробнее</a></p>
+</div>

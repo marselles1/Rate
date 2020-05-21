@@ -1,0 +1,16 @@
+﻿@model HomeViewModels
+
+<h1>
+    Лучшие приложения
+</h1>
+
+<div class=" row mt-5 mb-2">
+    @{
+        foreach (Application application in Model.FarApplications )
+        {
+            @Html.Partial("AllApplications", application)
+ 
+
+        }
+    }
+</div>

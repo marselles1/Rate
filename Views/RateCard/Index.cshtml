@@ -1,0 +1,13 @@
+﻿@model RateCardViewModels
+
+<div class="container">
+    @foreach (var el in Model.ratecard.listRateItems)
+    {
+        <div class="alert alert-warning mt-3">
+            <b>Приложение:</b> @el.application.name<br />
+            <b>Рейтинг</b> @el.application.rate
+        </div>
+    }
+    <hr />
+    <div class="btn btn-danger" asp-controller="Order"asp-action="Checkout">Оценить</div>
+</div>
